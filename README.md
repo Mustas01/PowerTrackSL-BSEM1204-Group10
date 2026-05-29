@@ -19,6 +19,13 @@ about.html
 style.css
 images/
 
+WEBSITE DESIGN STYLE
+Colors
+Dark blue
+Yellow
+White
+Black/gray
+
 MEMBER 2
 Functionality & Deployment
 
