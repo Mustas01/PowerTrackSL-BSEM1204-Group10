@@ -310,4 +310,54 @@ body{
 }
 
 
+/* =========================
+   Dark Mode
+========================= */
+
+.theme-btn{
+
+    background: #ffd60a;
+    color: black;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-left: 20px;
+}
+
+/* Dark Theme */
+
+.dark-mode{
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .report-section,
+.dark-mode .update-card,
+.dark-mode .contact-info,
+.dark-mode .contact-form{
+
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea,
+.dark-mode .form-group select{
+
+    background-color: #2c2c2c;
+    color: white;
+
+    border: 1px solid #555;
+}
+
+
 
