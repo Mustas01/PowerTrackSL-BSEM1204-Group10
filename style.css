@@ -1,0 +1,160 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo{
+    font-size: 28px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li{
+    margin-left: 20px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #ffd60a;
+}
+
+/* Hero Section */
+.hero{
+    background: linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url("images/power-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.hero h2{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 18px;
+}
+
+/* Report Form Section */
+.report-section{
+    width: 90%;
+    max-width: 700px;
+
+    background: white;
+
+    margin: 50px auto;
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Form Groups */
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+/* Button */
+.btn{
+    width: 100%;
+
+    background-color: #0d1b2a;
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #ffd60a;
+    color: black;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links{
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+
+    .hero h2{
+        font-size: 32px;
+    }
+
+}
+
