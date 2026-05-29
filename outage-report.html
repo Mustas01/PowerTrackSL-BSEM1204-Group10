@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerTrack SL - Report Outage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1 class="logo">⚡ PowerTrack SL</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Report Electricity Outage</h2>
+        <p>Help us track and resolve power issues across Sierra Leone.</p>
+    </section>
+
+    <!-- Report Form -->
+    <section class="report-section">
+
+        <form id="reportForm">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+                <label>District / Area</label>
+
+                <select id="area">
+                    <option value="">Select Area</option>
+                    <option>Freetown</option>
+                    <option>Bo</option>
+                    <option>Kenema</option>
+                    <option>Makeni</option>
+                    <option>Kono</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Problem Type</label>
+
+                <select id="problem">
+                    <option value="">Select Problem</option>
+                    <option>Complete Blackout</option>
+                    <option>Low Voltage</option>
+                    <option>Power Fluctuation</option>
+                    <option>Transformer Fault</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Problem Description</label>
+
+                <textarea id="description" rows="5"
+                    placeholder="Describe the issue..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Submit Report
+            </button>
+
+        </form>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
