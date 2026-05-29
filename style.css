@@ -158,3 +158,70 @@ body{
 
 }
 
+/* Updates Page */
+
+.updates-container{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.update-card{
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.update-card:hover{
+    transform: translateY(-5px);
+}
+
+.update-card h3{
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+.update-card p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Status Tags */
+
+.status{
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.outage{
+    background: red;
+}
+
+.restored{
+    background: green;
+}
+
+.maintenance{
+    background: orange;
+}
+
+
+
