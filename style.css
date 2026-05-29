@@ -361,6 +361,30 @@ body{
 
 
 /* =========================
+   Live Alert Bar
+========================= */
+
+.alert-bar{
+
+    background: #ffd60a;
+
+    color: black;
+
+    padding: 12px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.alert-bar marquee{
+    width: 100%;
+}
+
+
+
+
+/* =========================
    Footer
 ========================= */
 
