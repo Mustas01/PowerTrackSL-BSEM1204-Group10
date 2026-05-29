@@ -1,28 +1,83 @@
-```javascript
+/* =========================
+   Outage Report Form
+========================= */
+
 const form = document.getElementById("reportForm");
 
-form.addEventListener("submit", function(event) {
+if(form){
 
-    event.preventDefault();
+    form.addEventListener("submit", function(event){
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const area = document.getElementById("area").value;
-    const problem = document.getElementById("problem").value;
-    const description = document.getElementById("description").value;
+        event.preventDefault();
 
-    if(name === "" || email === "" || phone === ""
-        || area === "" || problem === "" || description === "") {
+        const name =
+        document.getElementById("name").value;
 
-        alert("Please fill in all fields!");
+        const email =
+        document.getElementById("email").value;
 
-    } else {
+        const phone =
+        document.getElementById("phone").value;
 
-        alert("Outage report submitted successfully!");
+        const area =
+        document.getElementById("area").value;
 
-        form.reset();
-    }
+        const problem =
+        document.getElementById("problem").value;
 
-});
-```
+        const description =
+        document.getElementById("description").value;
+
+        if(name === "" || email === "" ||
+           phone === "" || area === "" ||
+           problem === "" || description === ""){
+
+            alert("Please fill in all fields!");
+
+        }else{
+
+            alert("Outage report submitted successfully!");
+
+            form.reset();
+        }
+
+    });
+
+}
+
+
+/* =========================
+   Contact Form Validation
+========================= */
+
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+    contactForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        const name =
+        document.getElementById("contactName").value;
+
+        const email =
+        document.getElementById("contactEmail").value;
+
+        const message =
+        document.getElementById("contactMessage").value;
+
+        if(name === "" || email === "" || message === ""){
+
+            alert("Please complete all contact fields!");
+
+        }else{
+
+            alert("Message sent successfully!");
+
+            contactForm.reset();
+        }
+
+    });
+
+}
