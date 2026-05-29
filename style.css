@@ -382,6 +382,74 @@ body{
 }
 
 
+/* =========================
+   About Page
+========================= */
+
+.about-container{
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.about-image img{
+
+    width: 100%;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-content h2{
+
+    margin-bottom: 20px;
+
+    color: #0d1b2a;
+}
+
+.about-content p{
+
+    margin-bottom: 20px;
+
+    line-height: 1.8;
+}
+
+.about-content h3{
+
+    margin-bottom: 15px;
+}
+
+.about-content ul{
+
+    list-style: none;
+}
+
+.about-content ul li{
+
+    margin-bottom: 12px;
+
+    font-size: 17px;
+}
+
+/* Dark Mode */
+
+.dark-mode .about-content h2{
+    color: #ffd60a;
+}
+
+
 
 
 /* =========================
