@@ -4,7 +4,7 @@
 
 const form = document.getElementById("reportForm");
 
-if(form){
+if(form){ 
 
     form.addEventListener("submit", function(event){
 
@@ -127,4 +127,6 @@ if(themeBtn){
 
     });
 
-}
+} 
+
+
