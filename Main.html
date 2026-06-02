@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerTrack SL | Live Electricity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report.html" class="btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-wrapper">
+        
+        <div class="metrics-grid">
+            
+            <div class="dashboard-card status-card">
+                <h3>Current Status</h3>
+                <div class="status-circle-container">
+                    <div class="status-circle stable">
+                        <span>Stable</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card usage-card">
+                <h3>Appliance Energy Usage</h3>
+                <div class="pie-chart-container">
+                    <div class="css-pie-chart">
+                        <div class="pie-slice slice-lighting"><span>35%</span></div>
+                        <div class="pie-slice slice-tv"><span>35%</span></div>
+                        <div class="pie-slice slice-fridge"><span>30%</span></div>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="dot lighting"></span> Lighting (35%)</span>
+                        <span class="legend-item"><span class="dot fridge"></span> Fridge (30%)</span>
+                        <span class="legend-item"><span class="dot tv"></span> TV & Others (35%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card stats-card">
+                <h3>Today's Stats</h3>
+                <div class="stats-list">
+                    <div class="stat-line">
+                        <span class="stat-label">Outages Reported:</span>
+                        <span class="stat-number">12</span>
+                    </div>
+                    <div class="stat-line">
+                        <span class="stat-label">Avg Restoration Time:</span>
+                        <span class="stat-number">45 min</span>
+                    </div>
+                    <div class="stat-line">
+                        <span class="stat-label">Customers Affected:</span>
+                        <span class="stat-number">1,500</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="workspace-grid">
+            
+            <div class="dashboard-card feed-card">
+                <h3><i class="fa-solid fa-clock-rotate-left"></i> Live Feed Updates</h3>
+                <div class="feed-container">
+                    <div class="feed-item alert">
+                        <span class="feed-meta">Bo Township alert &bull; 3m ago</span>
+                        <p>Substation repair in Freetown central</p>
+                    </div>
+                    <div class="feed-item alert">
+                        <span class="feed-meta">Kenema Metro alert &bull; 46m ago</span>
+                        <p>Kenema: Unscheduled outage in Freetown ententto.</p>
+                    </div>
+                    <div class="feed-item stable">
+                        <span class="feed-meta">Freetown West stable &bull; 36m ago</span>
+                        <p>Substation repair in Freetown central</p>
+                    </div>
+                    <div class="feed-item stable">
+                        <span class="feed-meta">Makeni stable &bull; 46m ago</span>
+                        <p>Grid configuration testing successfully updated.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column-split">
+                
+                <div class="dashboard-card contacts-card">
+                    <h3><i class="fa-solid fa-phone-volume"></i> Emergency Contacts</h3>
+                    <div class="mini-contact-list">
+                        <div class="contact-row"><span>Fire</span><strong>(032) 678-2909</strong></div>
+                        <div class="contact-row"><span>Hospital</span><strong>(032) 575-5507</strong></div>
+                        <div class="contact-row"><span>EDSA</span><strong>(032) 275-7803</strong></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card action-link-card">
+                    <h3>Experiencing a Fault?</h3>
+                    <p>Log your specific location issue to notify engineers immediately.</p>
+                    <a href="report.html" class="btn-primary-block">Report Electricity Problem</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <section class="tips-section">
+            <div class="section-header">
+                <h3><i class="fa-solid fa-lightbulb"></i> Strategic Energy Saving Recommendations</h3>
+                <p>Simple optimizations to protect equipment from surges and scale down your prepaid EDSA token costs.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-detail-card">
+                    <div class="tip-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <h4>Install Surge Protectors & Delay Timers</h4>
+                    <p>Power restorations often carry high-voltage spikes. Use specialized delay switches for fridges and AC systems to prevent compressor burnouts.</p>
+                </div>
+                <div class="tip-detail-card">
+                    <div class="tip-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                    <h4>Manage Thermal Mass Loadings</h4>
+                    <p>Keep your refrigerator well-filled (even with water bottles if empty). A full fridge retains cooling cycles significantly better during unexpected short blackouts.</p>
+                </div>
+                <div class="tip-detail-card">
+                    <div class="tip-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h4>Transition to Solar Auxiliaries</h4>
+                    <p>Shift high-frequency tasks like smartphone charging, outdoor compound wall lanterns, and fans to localized small solar power bricks to preserve your primary meter line.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Limkokwing University Web Design 1 Project.</p>
+    </footer>
+
+</body>
+</html>

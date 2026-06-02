@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Electricity Problem | PowerTrack SL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report.html" class="active btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="form-window-box">
+            <div class="form-header-title">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> Report Electricity Problem</h2>
+                <p>Provide reliable field reports to assist local response configurations.</p>
+            </div>
+            
+            <form class="standalone-form" action="index.html" method="POST">
+                <div class="form-field">
+                    <label for="location">Location / Street Address</label>
+                    <input type="text" id="location" placeholder="e.g., Freetown first location, Wilkinson Rd" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="issue">Issue Type</label>
+                    <select id="issue" required>
+                        <option value="">Type of issue</option>
+                        <option value="blackout">Total Area Blackout</option>
+                        <option value="transformer">Transformer Fault / Sparks</option>
+                        <option value="cable">Fallen Line Pole</option>
+                        <option value="meter">Prepaid Meter Error Code</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="notes">Additional Visual Details</label>
+                    <textarea id="notes" rows="5" placeholder="Provide landmarks or any safety threats..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-green">Submit Report</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Limkokwing University Web Design 1 Project.</p>
+    </footer>
+
+</body>
+</html>

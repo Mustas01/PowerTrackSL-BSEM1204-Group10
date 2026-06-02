@@ -1,0 +1,422 @@
+/* --- Core Theme Settings --- */
+:root {
+    --bg-dark: #0a1128;
+    --bg-surface: #101f42;
+    --bg-card: #1c2d5a;
+    --text-main: #f4f6fa;
+    --text-muted: #8fa0c4;
+    --electric-green: #00e676;
+    --alert-amber: #ff9100;
+    --alert-red: #ff3d00;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Base Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.5;
+}
+
+/* --- Header & Navigation Bar --- */
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--bg-card);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo i { color: var(--electric-green); margin-right: 4px;}
+.logo span { color: var(--electric-green); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--electric-green);
+}
+
+.btn-nav {
+    border: 1px solid var(--electric-green);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    color: var(--electric-green) !important;
+}
+
+/* --- Main Dashboard Container Setup --- */
+.dashboard-wrapper {
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dashboard-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* --- Grid Systems --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 1.5rem;
+}
+
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 1.5rem;
+}
+
+.right-column-split {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* --- Card Variant 1: Status Circle Component --- */
+.status-circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+}
+
+.status-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.status-circle.stable {
+    background-color: rgba(0, 230, 118, 0.1);
+    border: 6px solid var(--electric-green);
+    color: var(--electric-green);
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
+}
+
+/* --- Card Variant 2: Pure CSS Pie Chart --- */
+.pie-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.css-pie-chart {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    /* Gradient values set to map segments visually matching mockup color layouts */
+    background: conic-gradient(
+        var(--electric-green) 0% 35%,
+        var(--alert-amber) 35% 65%,
+        #4d73df 65% 100%
+    );
+}
+
+.pie-slice {
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* Fine-tune absolute percentages overlays placement inside code architecture */
+.slice-lighting { top: 20%; right: 20%; }
+.slice-fridge { bottom: 15%; left: 45%; }
+.slice-tv { top: 40%; left: 15%; }
+
+.chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legend-item {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+.dot.lighting { background-color: var(--electric-green); }
+.dot.fridge { background-color: var(--alert-amber); }
+.dot.tv { background-color: #4d73df; }
+
+/* --- Card Variant 3: Today's Stats Layout --- */
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 130px;
+}
+
+.stat-line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.3rem;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.stat-number {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* --- Card Variant 4: Live Feed Log Updates --- */
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.feed-item {
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
+}
+
+.feed-meta {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.feed-item.alert { border-left-color: var(--alert-amber); }
+.feed-item.stable { border-left-color: var(--electric-green); }
+
+/* --- Card Variant 5: Emergency Contacts --- */
+.mini-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-card);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.contact-row span { color: var(--text-muted); }
+.contact-row strong { color: var(--electric-green); }
+
+/* --- Standalone Core Interaction Actions --- */
+.action-link-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.btn-primary-block {
+    display: block;
+    text-align: center;
+    background-color: var(--electric-green);
+    color: var(--bg-dark);
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-block:hover {
+    background-color: #00c853;
+}
+
+/* --- Recommendations Component Styles --- */
+.tips-section {
+    margin-top: 1.5rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h3 { margin-bottom: 0.2rem; font-size: 1.3rem;}
+.section-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-detail-card {
+    background-color: var(--bg-surface);
+    padding: 1.5rem;
+    border-radius: 6px;
+    display: flex;
+    gap: 1rem;
+}
+
+.tip-icon i {
+    font-size: 1.5rem;
+    color: var(--electric-green);
+    background-color: var(--bg-card);
+    padding: 0.7rem;
+    border-radius: 6px;
+}
+
+.tip-detail-card h4 { margin-bottom: 0.4rem; color: #ffffff; }
+.tip-detail-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; }
+
+/* --- Subpage Component Shell Container --- */
+.page-container {
+    max-width: 750px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.form-window-box {
+    background-color: var(--bg-surface);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.form-header-title { margin-bottom: 2rem; }
+.form-header-title h2 i { color: var(--electric-green); margin-right: 6px; }
+.form-header-title p { color: var(--text-muted); margin-top: 0.2rem; }
+
+.standalone-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-field input, .form-field select, .form-field textarea {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.8rem;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+    outline: 1px solid var(--electric-green);
+}
+
+.btn-submit-green {
+    background-color: var(--electric-green);
+    color: var(--bg-dark);
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* --- About Page Typography Layouts --- */
+.about-hero-block { text-align: center; margin-bottom: 3rem; }
+.about-hero-block h1 { margin-bottom: 0.5rem; }
+.about-hero-block p { color: var(--text-muted); }
+
+.about-card-stack { display: flex; flex-direction: column; gap: 1.5rem; }
+.about-info-card { background-color: var(--bg-surface); padding: 2rem; border-radius: 8px; }
+.about-info-card h3 { color: var(--electric-green); margin-bottom: 0.8rem; }
+.about-info-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+/* --- Global Footer Section --- */
+.main-footer {
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--bg-card);
+    margin-top: 6rem;
+}
+
+/* --- Screen Component Responsiveness (Media Queries) --- */
+@media (max-width: 1024px) {
+    .metrics-grid, .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+    .status-circle-container, .stats-list {
+        height: auto;
+    }
+}
