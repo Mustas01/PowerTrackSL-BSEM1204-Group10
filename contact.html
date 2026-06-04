@@ -4,94 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - PowerTrack SL</title>
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-
-        <h1 class="logo">⚡ PowerTrack SL</h1>
-
-    <!-- Hamburger Button -->
-    <div class="menu-toggle" id="menuToggle">
-        ☰
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="about.html">About</a></li>
-
-        <li><a href="outage-report.html">Report</a></li>
-
-        <li><a href="updates.html">Updates</a></li>
-
-        <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-
-</nav>
-    
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report.html" class="btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h2>Contact PowerTrack SL</h2>
-        <p>Reach out to us for support and electricity updates.</p>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Contact PowerTrack SL</h1>
+                <p class="hero-subtitle">Get in touch with our support team. We're here to help with questions about electricity monitoring, reporting issues, or general inquiries.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon"><i class="fa-solid fa-envelope"></i></div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-container">
+    <section class="page-container">
+        <div class="about-card-stack">
+            <div class="about-info-card">
+                <h3><i class="fa-solid fa-envelope"></i> Contact Information</h3>
+                <p><strong>Email:</strong> support@powertracksl.com</p>
+                <p><strong>Phone:</strong> +232 76 123456</p>
+                <p><strong>Location:</strong> Freetown, Sierra Leone</p>
+                <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
 
-        <!-- Contact Info -->
-        <div class="contact-info">
+            <div class="form-window-box">
+                <div class="form-header-title">
+                    <h2><i class="fa-solid fa-message"></i> Send Us a Message</h2>
+                    <p>We'll respond to your inquiry within 24 hours.</p>
+                </div>
 
-            <h3>Contact Information</h3>
+                <form class="standalone-form" id="contactForm">
+                    <div class="form-field">
+                        <label for="contactName">Full Name</label>
+                        <input type="text" id="contactName" placeholder="Your name" required>
+                    </div>
 
-            <p><strong>Email:</strong> support@powertracksl.com</p>
+                    <div class="form-field">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com" required>
+                    </div>
 
-            <p><strong>Phone:</strong> +232 76 123456</p>
+                    <div class="form-field">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="How can we help you?" required></textarea>
+                    </div>
 
-            <p><strong>Location:</strong> Freetown, Sierra Leone</p>
-
+                    <button type="submit" class="btn-submit-green">Send Message</button>
+                </form>
+            </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-
-            <form id="contactForm">
-
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="contactName"
-                    placeholder="Enter your name">
-                </div>
-
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="contactEmail"
-                    placeholder="Enter your email">
-                </div>
-
-                <div class="form-group">
-                    <label>Message</label>
-
-                    <textarea id="contactMessage"
-                    rows="5"
-                    placeholder="Type your message"></textarea>
-                </div>
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
     </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Limkokwing University Web Design 1 Project</p>
+    </footer>
 
     <script src="script.js"></script>
 

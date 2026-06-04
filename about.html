@@ -5,51 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - PowerTrack SL</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo-container">
-            <div class="national-emblem-mock"></div>
-            <span class="logo-text">PowerTrack <span class="highlight">SL</span></span>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="report.html" class="btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#outages">Outage Tracker</a></li>
-                <li><a href="index.html#report">Report Problem</a></li>
-                <li><a href="index.html#tips">Energy Tips</a></li>
-                <li><a href="index.html#contacts">Emergency Contacts</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="about-main-container">
-        <article class="ux-card border-blue single-page-card">
-            <div class="card-header">
-                <span class="card-icon icon-blue">🌐</span>
-                <h2>About PowerTrack SL</h2>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>About PowerTrack SL</h1>
+                <p class="hero-subtitle">Transforming electricity monitoring in Sierra Leone through real-time data, community reporting, and actionable energy insights.</p>
             </div>
-            <div class="about-body-text">
+            <div class="hero-visual">
+                <div class="hero-icon"><i class="fa-solid fa-globe"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="page-container">
+        <div class="about-card-stack">
+            <div class="about-info-card">
+                <h3><i class="fa-solid fa-lightbulb"></i> Our Mission</h3>
                 <p>Energy infrastructure remains one of the foundational cornerstones of socioeconomic development within Sierra Leone. However, a persistent challenge for domestic households and commercial enterprises alike has been the lack of real-time, centralized data regarding power distribution states and maintenance schedules.
 
-                 PowerTrack SL was conceptualized to solve this critical information asymmetric bottleneck. By engineering a dual-purpose data pipeline, the platform transforms ordinary citizens from passive consumers into active node reporters. Our architecture blends official grid operational inputs with structured, 
-                 crowdsourced public fault reporting. The result is an intuitive, live dashboard interface that maps out grid stability, displays immediate appliance energy analytics, and delivers localized telemetry to keep the public safely informed.</p>
-                <p>Engineered to satisfy high-level UX requirements for the Web Design 1 Module framework at Limkokwing University.</p>
-                
-                <h3>Project Core Framework</h3>
+                PowerTrack SL was conceptualized to solve this critical information asymmetric bottleneck. By engineering a dual-purpose data pipeline, the platform transforms ordinary citizens from passive consumers into active node reporters.</p>
+            </div>
+            
+            <div class="about-info-card">
+                <h3><i class="fa-solid fa-gear"></i> How It Works</h3>
+                <p>Our architecture blends official grid operational inputs with structured, crowdsourced public fault reporting. The result is an intuitive, live dashboard interface that maps out grid stability, displays immediate appliance energy analytics, and delivers localized telemetry to keep the public safely informed.</p>
+            </div>
+            
+            <div class="about-info-card">
+                <h3><i class="fa-solid fa-book"></i> Core Framework</h3>
                 <ul class="professional-list">
-                    <li>Semantic layout scaling for responsive form submission interfaces.</li>
-                    <li>Adaptive typography scaling compatible across target desktop and small-screen device viewports.</li>
-                    <li>Secure front-end presentation patterns optimizing system readability.</li>
+                    <li><strong>Responsive Design:</strong> Semantic layout scaling for all device sizes</li>
+                    <li><strong>Accessibility:</strong> Adaptive typography and high contrast for readability</li>
+                    <li><strong>Security:</strong> Safe front-end patterns and data handling</li>
                 </ul>
             </div>
-        </article>
+            
+            <div class="about-info-card">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Academic Project</h3>
+                <p>Engineered to satisfy high-level UX requirements for the Web Design 1 Module framework at Limkokwing University. This project demonstrates modern web design principles including responsive layouts, semantic HTML, and user-centered design thinking.</p>
+            </div>
+        </div>
     </main>
 
-    <footer class="app-footer">
-        <p>&copy; 2026 PowerTrack SL. Built for Web Design 1 | Limkokwing University.</p>
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Live Electricity Dashboard | Limkokwing University Web Design 1 Project</p>
     </footer>
 
 </body>
