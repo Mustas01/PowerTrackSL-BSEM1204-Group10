@@ -3,168 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Updates - PowerTrack SL</title>
-
+    <title>Updates - PowerTrack SL</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
-     
-    <nav class="navbar">
-
-        <h1 class="logo">⚡ PowerTrack SL</h1>
-        
-        <button id="themeBtn" class="theme-btn">
-        🌙
-        </button>
-
-
-
-       <!-- Hamburger Button -->
-        <div class="menu-toggle" id="menuToggle">
-           ☰
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report.html" class="btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <ul class="nav-links" id="navLinks">
-
-          <li><a href="index.html">Home</a></li>
-
-          <li><a href="about.html">About</a></li>
-
-          <li><a href="outage-report.html">Report</a></li>
-
-          <li><a href="updates.html">Updates</a></li>
-  
-         <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-  
-    </nav>
-
-<!-- Live Alert Bar -->
-
-<div class="alert-bar">
-
-    <marquee behavior="scroll" direction="left">
-
-        ⚠️ Scheduled maintenance in Freetown tonight from 8PM - 11PM |
-        ⚡ Power restored in Bo district |
-        🔧 Transformer repairs ongoing in Kenema |
-        🚨 Report outages immediately using PowerTrack SL
-
-    </marquee>
-
-</div>
-
-  <!-- Hero -->
-    <section class="hero">
-        <h2>Electricity Updates</h2>
-        <p>Track current outages and restoration updates.</p>
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Live Updates</h1>
+                <p class="hero-subtitle">Track current electricity outages and restoration updates across Sierra Leone in real-time.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon"><i class="fa-solid fa-circle-info"></i></div>
+            </div>
+        </div>
     </section>
 
     <!-- Update Cards -->
-    <section class="updates-container">
+    <main class="dashboard-wrapper">
+        <div class="metrics-grid">
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-map-pin"></i> Freetown</h3>
+                <p>Power interruption reported in East End areas.</p>
+                <span class="status-badge outage">⚠️ Outage</span>
+            </div>
 
-        <div class="update-card">
-            <h3>Freetown</h3>
-            <p>Power interruption reported in East End areas.</p>
-            <span class="status outage">Outage</span>
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-map-pin"></i> Bo</h3>
+                <p>Electricity restored successfully in central Bo.</p>
+                <span class="status-badge restored">✅ Restored</span>
+            </div>
+
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-map-pin"></i> Kenema</h3>
+                <p>Transformer maintenance ongoing.</p>
+                <span class="status-badge maintenance">🔧 Maintenance</span>
+            </div>
+
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-map-pin"></i> Makeni</h3>
+                <p>Temporary low voltage reported.</p>
+                <span class="status-badge outage">⚡ Low Voltage</span>
+            </div>
         </div>
+    </main>
 
-        <div class="update-card">
-            <h3>Bo</h3>
-            <p>Electricity restored successfully in central Bo.</p>
-            <span class="status restored">Restored</span>
-        </div>
-
-        <div class="update-card">
-            <h3>Kenema</h3>
-            <p>Transformer maintenance ongoing.</p>
-            <span class="status maintenance">Maintenance</span>
-        </div>
-
-        <div class="update-card">
-            <h3>Makeni</h3>
-            <p>Temporary low voltage reported.</p>
-            <span class="status outage">Low Voltage</span>
-        </div>
-
-    </section>
-
-    <section class="stats-section">
-
-    <div class="stat-card">
-        <h2>12</h2>
-        <p>Active Outages</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>34</h2>
-        <p>Issues Resolved</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>5</h2>
-        <p>Maintenance Projects</p>
-    </div>
-
-</section>
-
-    <!-- Footer -->
-
-<footer class="footer">
-
-    <div class="footer-content">
-
-        <div class="footer-section">
-            <h3>⚡ PowerTrack SL</h3>
-
-            <p>
-                Powering Sierra Leone with smart outage
-                reporting and electricity updates.
-            </p>
-        </div>
-
-        <div class="footer-section">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About</a></li>
-
-                <li><a href="outage-report.html">Report</a></li>
-
-                <li><a href="updates.html">Updates</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </div>
-
-        <div class="footer-section">
-
-            <h3>Contact</h3>
-
-            <p>Email: support@powertracksl.com</p>
-
-            <p>Phone: +232 76 123456</p>
-
-            <p>Freetown, Sierra Leone</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>
-            © 2026 PowerTrack SL | All Rights Reserved
-        </p>
-    </div>
-
-</footer>
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Live Electricity Dashboard | Limkokwing University Web Design 1 Project</p>
+    </footer>
 
 </body>
 </html>

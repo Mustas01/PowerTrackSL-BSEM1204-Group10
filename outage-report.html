@@ -3,182 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerTrack SL - Report Outage</title>
-
+    <title>Report Outage - PowerTrack SL</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
-
-        <h1 class="logo">⚡ PowerTrack SL</h1>
-        <button id="themeBtn" class="theme-btn">
-        🌙
-        </button>
-
-    <!-- Hamburger Button -->
-    <div class="menu-toggle" id="menuToggle">
-        ☰
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="about.html">About</a></li>
-
-        <li><a href="outage-report.html">Report</a></li>
-
-        <li><a href="updates.html">Updates</a></li>
-
-        <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-
-</nav> 
-
-<!-- Live Alert Bar -->
-
-<div class="alert-bar">
-
-    <marquee behavior="scroll" direction="left">
-
-        ⚠️ Scheduled maintenance in Freetown tonight from 8PM - 11PM |
-        ⚡ Power restored in Bo district |
-        🔧 Transformer repairs ongoing in Kenema |
-        🚨 Report outages immediately using PowerTrack SL
-
-    </marquee>
-
-</div>
-
-
-   
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bolt"></i> PowerTrack <span>SL</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report.html" class="btn-nav">Report Issue</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h2>Report Electricity Outage</h2>
-        <p>Help us track and resolve power issues across Sierra Leone.</p>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Report Electricity Outage</h1>
+                <p class="hero-subtitle">Help us track and resolve power issues across Sierra Leone. Your information helps us respond faster.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon"><i class="fa-solid fa-power-off"></i></div>
+            </div>
+        </div>
     </section>
 
     <!-- Report Form -->
-    <section class="report-section">
-
-        <form id="reportForm">
-
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name">
+    <section class="page-container">
+        <div class="form-window-box">
+            <div class="form-header-title">
+                <h2><i class="fa-solid fa-bell"></i> Submit Outage Report</h2>
+                <p>Provide details about the electricity outage to help us resolve it faster.</p>
             </div>
 
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email">
-            </div>
+            <form class="standalone-form" id="reportForm">
+                <div class="form-field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
 
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter phone number">
-            </div>
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
 
-            <div class="form-group">
-                <label>District / Area</label>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter phone number" required>
+                </div>
 
-                <select id="area">
-                    <option value="">Select Area</option>
-                    <option>Freetown</option>
-                    <option>Bo</option>
-                    <option>Kenema</option>
-                    <option>Makeni</option>
-                    <option>Kono</option>
-                </select>
-            </div>
+                <div class="form-field">
+                    <label for="area">District / Area</label>
+                    <select id="area" required>
+                        <option value="">Select Area</option>
+                        <option>Freetown</option>
+                        <option>Bo</option>
+                        <option>Kenema</option>
+                        <option>Makeni</option>
+                        <option>Kono</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label>Problem Type</label>
+                <div class="form-field">
+                    <label for="problem">Problem Type</label>
+                    <select id="problem" required>
+                        <option value="">Select Problem</option>
+                        <option>Complete Blackout</option>
+                        <option>Low Voltage</option>
+                        <option>Power Fluctuation</option>
+                        <option>Transformer Fault</option>
+                    </select>
+                </div>
 
-                <select id="problem">
-                    <option value="">Select Problem</option>
-                    <option>Complete Blackout</option>
-                    <option>Low Voltage</option>
-                    <option>Power Fluctuation</option>
-                    <option>Transformer Fault</option>
-                </select>
-            </div>
+                <div class="form-field">
+                    <label for="description">Problem Description</label>
+                    <textarea id="description" rows="5" placeholder="Describe the issue..." required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label>Problem Description</label>
-
-                <textarea id="description" rows="5"
-                    placeholder="Describe the issue..."></textarea>
-            </div>
-
-            <button type="submit" class="btn">
-                Submit Report
-            </button>
-
-        </form>
-
+                <button type="submit" class="btn-submit-green">Submit Report</button>
+            </form>
+        </div>
     </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 PowerTrack SL | Limkokwing University Web Design 1 Project</p>
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
-
-<!-- Footer -->
-
-<footer class="footer">
-
-    <div class="footer-content">
-
-        <div class="footer-section">
-            <h3>⚡ PowerTrack SL</h3>
-
-            <p>
-                Powering Sierra Leone with smart outage
-                reporting and electricity updates.
-            </p>
-        </div>
-
-        <div class="footer-section">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About</a></li>
-
-                <li><a href="outage-report.html">Report</a></li>
-
-                <li><a href="updates.html">Updates</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </div>
-
-        <div class="footer-section">
-
-            <h3>Contact</h3>
-
-            <p>Email: support@powertracksl.com</p>
-
-            <p>Phone: +232 76 123456</p>
-
-            <p>Freetown, Sierra Leone</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>
-            © 2026 PowerTrack SL | All Rights Reserved
-        </p>
-    </div>
-
-</footer>
 </html>
 
